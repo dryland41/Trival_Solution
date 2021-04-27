@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Day_Button">
-        <item name="textAllCaps">false</item>
-    </style>
-
-    <style name="Joke_Setup">
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
     <style name="Trivia_Question">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
     </style>
-
-    <style name="Joke_Punchline" parent="Joke_Setup">
-        <item name="android:textColor">@color/design_default_color_primary_dark</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:visibility">gone</item>
-    </style>
-
     <style name="Trivia_Answer" parent="Trivia_Question">
         <item name="android:textColor">@color/design_default_color_primary_dark</item>
         <item name="android:textSize">20sp</item>

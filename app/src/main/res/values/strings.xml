@@ -1,15 +1,3 @@
 <resources>
-    <string name="headline_joke_title"><u>Joke of the Moment</u></string>
-    <string name="app_name">API_practice</string>
-    <string name="a_gif">This is a gif</string>
-    <string name="joke_image">joke_image</string>
-    <string name="day_one">Day 1</string>
-    <string name="day_one_title">Day 1: Jokes with Retrofit</string>
-    <string name="day_two">Day 2</string>
-    <string name="day_three">Day 3</string>
-    <string name="day_four">Day 4</string>
-    <string name="day_five">Day 5</string>
-
-    <string name="button">Button</string>
-    <string name="nothing_to_see">Nothing to see here… yet</string>
+    <string name="app_name">Trivial Solutions</string>
 </resources>

@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Trivial Solution");
+        setTitle(R.string.app_name);
 
         //STEP 1: Placed fragments into the Activity's fragment containers
         if (savedInstanceState == null) {

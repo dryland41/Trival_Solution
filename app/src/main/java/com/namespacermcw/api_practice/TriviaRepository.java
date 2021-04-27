@@ -22,5 +22,5 @@ public class TriviaRepository {
     /**
      * Provides the call object for the list of random Joke api
      */
-    public Call<List<Trivium>> getTenRandomQuestionsCall() { return triviaService.getRandomQuestions(10); }
+    public Call<List<Trivium>> getRandomQuestionsCall() { return triviaService.getRandomQuestions(25); }
 }

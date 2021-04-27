@@ -73,7 +73,7 @@ public class TriviaRecyclerViewAdapter extends RecyclerView.Adapter<TriviaRecycl
 
         /**
          * Binds data from the Trivium object passed to widgets in the list item layout
-         * and sets the ViewHolder's onClickListener to the jokeItemPunchline widget
+         * and sets the ViewHolder's onClickListener to the triviaItemAnswer widget
          */
         public void bindTriviaListItem(Trivium trivia) {
             triviaItemQuestion.setText(trivia.getQuestion());
@@ -83,7 +83,7 @@ public class TriviaRecyclerViewAdapter extends RecyclerView.Adapter<TriviaRecycl
 
         /**
          * Notifies the AdapterListener that an item has been clicked, providing the item position
-         * and reveals the jokeItemPunchline widget
+         * and reveals the triviaItemAnswer widget
          */
         @Override
         public void onClick(View v) {

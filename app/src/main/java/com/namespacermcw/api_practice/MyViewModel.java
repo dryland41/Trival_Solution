@@ -14,28 +14,12 @@ public class MyViewModel extends ViewModel {
     private final String TAG = "_WORK";
 
     //STEP 1: Created Repositories that will fetch our data
-    private final JokeRepository jokeRepository = new JokeRepository();
     private final TriviaRepository triviaRepository = new TriviaRepository();
 
     //STEP 2: Created MutableLiveData objects to carry and emit our data
-    private MutableLiveData<Joke> headlineJoke;
-    private MutableLiveData<List<Joke>> jokes;
     private MutableLiveData<List<Trivium>> trivia;
 
     //STEP 3: Created methods that access our MutableLiveData objects read-only
-
-    /**
-     * Accessor method for jokes MutableLiveData
-     * emits to observers whenever jokes is updated
-     */
-    public LiveData<List<Joke>> getJokes() {
-        if (jokes == null) {
-            jokes = new MutableLiveData<>();
-            loadJokes();
-        }
-
-        return jokes;
-    }
 
     /**
      * Accessor method for trivia MutableLiveData
@@ -51,29 +35,10 @@ public class MyViewModel extends ViewModel {
     }
 
     /**
-     * Updates jokes MutableLiveData with a list of 10 random Jokes returned from JokeRepository's ApiService
-     */
-    private void loadJokes() {
-        jokeRepository.getTenRandomJokesCall().enqueue(new Callback<List<Joke>>() {
-            @Override
-            public void onResponse(@NotNull Call<List<Joke>> call, @NotNull Response<List<Joke>> response) {
-                if (response.body() != null) {
-                    jokes.setValue(response.body());
-                }
-            }
-
-            @Override
-            public void onFailure(@NotNull Call<List<Joke>> call, @NotNull Throwable t) {
-                Log.e(TAG, "Random jokes call failed");
-            }
-        });
-    }
-
-    /**
      * Updates trivia MutableLiveData with a list of 10 random questions returned from TriviaRepository's ApiService
      */
     private void loadTrivia() {
-        triviaRepository.getTenRandomQuestionsCall().enqueue(new Callback<List<Trivium>>() {
+        triviaRepository.getRandomQuestionsCall().enqueue(new Callback<List<Trivium>>() {
             @Override
             public void onResponse(@NotNull Call<List<Trivium>> call, @NotNull Response<List<Trivium>> response) {
                 if (response.body() != null) {

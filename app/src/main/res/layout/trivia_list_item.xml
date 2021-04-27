@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/trivia_item_answer"
-        style="@style/Joke_Punchline"
+        style="@style/Trivia_Answer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/trivia_item_question"
